@@ -119,6 +119,10 @@ namespace TechJobsConsole
         private static void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
             Console.WriteLine("PrintJobs is not implemented yet");
+            // if (someJobs > 0)
+            //for(Dictionary<string, string> jobs : someJobs)
+            //else {
+            //system.out.print("No Results")
         }
     }
 }
