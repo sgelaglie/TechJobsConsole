@@ -49,7 +49,7 @@ namespace TechJobsConsole
             {
                 string aValue = row[column];
 
-                if (aValue.Contains(value))
+                if (aValue.ToLower().Contains(value.ToLower()))
                 {
                     jobs.Add(row);
                 }
@@ -67,19 +67,12 @@ namespace TechJobsConsole
             foreach (Dictionary<string, string> row in AllJobs)
                 foreach (string jobAttribute in row.Values)
                 {
-                    if (jobAttribute.Contains(searchInput))
+                    if (jobAttribute.ToLower().Contains(searchInput.ToLower()))
                     {
-
-
-
-                        if (jobAttribute.Contains(searchInput))
-                        {
-                            jobs.Add(row);
-                            break;
-                        }
+                         jobs.Add(row);
+                         break;
                     }
 
-                    return jobs;
                 }
             
             return jobs;
